@@ -12,13 +12,9 @@ dotenv.config();
 const app = express();
 
 connectDB();
-// Middleware
-const corsOptions = {
-  origin: "https://task-master-ashen-nu.vercel.app", //(https://your-client-app.com)
-  optionsSuccessStatus: 200,
-};
 
-app.use(cors(corsOptions));
+
+app.use(cors());
 
 app.use(express.json());
 // Routes
